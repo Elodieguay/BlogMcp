@@ -1,7 +1,7 @@
 import { supabase } from "./supabase.js";
 
 export async function readNotes() {
-        console.error("READ NOTES FROM SUPABASE");
+        // console.error("READ NOTES FROM SUPABASE");
 
     const { data, error } = await supabase
         .from("notes")
@@ -9,8 +9,8 @@ export async function readNotes() {
         .eq("id", 1)
         .single();
 
-        console.error("SUPABASE DATA:", data);
-    console.error("SUPABASE ERROR:", error)
+    //     console.error("SUPABASE DATA:", data);
+    // console.error("SUPABASE ERROR:", error)
 
     if (error) {
         throw error;

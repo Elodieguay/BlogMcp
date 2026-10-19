@@ -1,0 +1,14 @@
+<script>
+async function loadData() {
+    const notesResponse = await fetch("/api/notes");
+    const notes = await notesResponse.json();
+
+    const historyResponse = await fetch("/api/history");
+    const history = await historyResponse.json();
+
+    console.log(notes);
+    console.log(history);
+}
+
+loadData();
+</script>
